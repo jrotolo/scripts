@@ -25,11 +25,11 @@ if [ "$(ls -A $DIR)" ]; then
 			shift
 		done
 		if [[ vflag == on ]]; then
-			rm -vdi $DIR/*
+			rm -rfvdi $DIR/*
 		elif [ -n "$filename" ]; then
-			rm -vd $DIR/* >> $filename
+			rm -rfvd $DIR/* >> $filename
 		else
-			rm -vd $DIR/*
+			rm -rfvd $DIR/*
 		fi
 		echo "All clean! Have a swell day!"
 	else
