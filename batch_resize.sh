@@ -109,16 +109,16 @@ function print_conclusion_info {
 # Main driver function to run program
 # args: $@
 function main {
-  num_processed_files=0
-  process_args $@
-  create_output_dir
-  cd $output_dir
-  for dir in * ; do
-    for i in $(find $dir -name "*.jpg"); do
-      resize_image $i
-      num_processed_files=$((num_processed_files+num_of_ratios))
-    done
-  done
+	num_processed_files=0
+	process_args $@
+	create_output_dir
+	cd $output_dir
+	for dir in * ; do
+		for i in $(find $dir -name "*.jpg"); do
+			resize_image $i
+			num_processed_files=$((num_processed_files+num_of_ratios))
+		done
+	done
   print_conclusion_info
 }
 
