@@ -119,7 +119,7 @@ function main {
 			num_processed_files=$((num_processed_files+num_of_ratios))
 		done
 	done
-	print_conclusion_info
+  print_conclusion_info
 }
 
 main $@
